@@ -12,8 +12,8 @@ package 'ntp' do
   action :install
 end
 
-file '/etc/motd' do
-  content 'This server is the property of MySelf'
+template '/etc/motd' do
+  source 'motd.erb'
   owner 'root'
   group 'root'
 end
